@@ -2,9 +2,23 @@
 <project source="2.7.1" version="1.0">
   This file is intended to be loaded by Logisim (http://www.cburch.com/logisim/).
 
-  <lib desc="#Wiring" name="0"/>
+  <lib desc="#Wiring" name="0">
+    <tool name="Splitter">
+      <a name="fanout" val="4"/>
+      <a name="incoming" val="4"/>
+    </tool>
+    <tool name="Pin">
+      <a name="facing" val="west"/>
+      <a name="output" val="true"/>
+      <a name="tristate" val="false"/>
+    </tool>
+  </lib>
   <lib desc="#Gates" name="1">
     <tool name="AND Gate">
+      <a name="size" val="30"/>
+      <a name="inputs" val="2"/>
+    </tool>
+    <tool name="XOR Gate">
       <a name="size" val="30"/>
       <a name="inputs" val="2"/>
     </tool>
@@ -146,6 +160,130 @@
     <comp lib="1" loc="(210,280)" name="AND Gate">
       <a name="size" val="30"/>
       <a name="inputs" val="2"/>
+    </comp>
+  </circuit>
+  <circuit name="Somador-subtrator">
+    <a name="circuit" val="Somador-subtrator"/>
+    <a name="clabel" val=""/>
+    <a name="clabelup" val="east"/>
+    <a name="clabelfont" val="SansSerif plain 12"/>
+    <wire from="(430,20)" to="(430,90)"/>
+    <wire from="(270,20)" to="(270,90)"/>
+    <wire from="(350,20)" to="(350,90)"/>
+    <wire from="(190,20)" to="(190,90)"/>
+    <wire from="(300,340)" to="(350,340)"/>
+    <wire from="(180,130)" to="(180,220)"/>
+    <wire from="(390,470)" to="(490,470)"/>
+    <wire from="(120,80)" to="(410,80)"/>
+    <wire from="(160,20)" to="(190,20)"/>
+    <wire from="(120,220)" to="(150,220)"/>
+    <wire from="(510,490)" to="(540,490)"/>
+    <wire from="(170,50)" to="(170,90)"/>
+    <wire from="(120,230)" to="(140,230)"/>
+    <wire from="(120,70)" to="(330,70)"/>
+    <wire from="(420,380)" to="(430,380)"/>
+    <wire from="(180,220)" to="(190,220)"/>
+    <wire from="(90,90)" to="(100,90)"/>
+    <wire from="(120,60)" to="(250,60)"/>
+    <wire from="(220,220)" to="(220,290)"/>
+    <wire from="(380,390)" to="(430,390)"/>
+    <wire from="(120,50)" to="(170,50)"/>
+    <wire from="(160,20)" to="(160,230)"/>
+    <wire from="(260,130)" to="(260,280)"/>
+    <wire from="(250,60)" to="(250,90)"/>
+    <wire from="(160,230)" to="(190,230)"/>
+    <wire from="(190,20)" to="(270,20)"/>
+    <wire from="(300,270)" to="(310,270)"/>
+    <wire from="(230,210)" to="(230,450)"/>
+    <wire from="(270,20)" to="(350,20)"/>
+    <wire from="(350,20)" to="(430,20)"/>
+    <wire from="(120,240)" to="(120,370)"/>
+    <wire from="(310,460)" to="(490,460)"/>
+    <wire from="(150,270)" to="(270,270)"/>
+    <wire from="(340,130)" to="(340,330)"/>
+    <wire from="(330,70)" to="(330,90)"/>
+    <wire from="(140,230)" to="(140,320)"/>
+    <wire from="(470,480)" to="(490,480)"/>
+    <wire from="(260,280)" to="(270,280)"/>
+    <wire from="(380,320)" to="(390,320)"/>
+    <wire from="(300,280)" to="(300,340)"/>
+    <wire from="(310,270)" to="(310,460)"/>
+    <wire from="(120,210)" to="(190,210)"/>
+    <wire from="(90,20)" to="(160,20)"/>
+    <wire from="(420,130)" to="(420,380)"/>
+    <wire from="(120,370)" to="(430,370)"/>
+    <wire from="(410,80)" to="(410,90)"/>
+    <wire from="(220,290)" to="(270,290)"/>
+    <wire from="(390,320)" to="(390,470)"/>
+    <wire from="(470,370)" to="(470,480)"/>
+    <wire from="(140,320)" to="(350,320)"/>
+    <wire from="(150,220)" to="(150,270)"/>
+    <wire from="(460,370)" to="(470,370)"/>
+    <wire from="(340,330)" to="(350,330)"/>
+    <wire from="(220,210)" to="(230,210)"/>
+    <wire from="(90,200)" to="(100,200)"/>
+    <wire from="(380,330)" to="(380,390)"/>
+    <wire from="(230,450)" to="(490,450)"/>
+    <comp lib="1" loc="(420,130)" name="XOR Gate">
+      <a name="facing" val="south"/>
+      <a name="size" val="30"/>
+      <a name="inputs" val="2"/>
+    </comp>
+    <comp lib="0" loc="(100,200)" name="Splitter">
+      <a name="fanout" val="4"/>
+      <a name="incoming" val="4"/>
+      <a name="appear" val="right"/>
+    </comp>
+    <comp lib="0" loc="(90,20)" name="Pin">
+      <a name="tristate" val="false"/>
+      <a name="label" val="SUB"/>
+    </comp>
+    <comp loc="(220,210)" name="SC">
+      <a name="label" val="SC0"/>
+    </comp>
+    <comp loc="(300,270)" name="SC">
+      <a name="label" val="SC1"/>
+    </comp>
+    <comp lib="1" loc="(340,130)" name="XOR Gate">
+      <a name="facing" val="south"/>
+      <a name="size" val="30"/>
+      <a name="inputs" val="2"/>
+    </comp>
+    <comp lib="0" loc="(100,90)" name="Splitter">
+      <a name="fanout" val="4"/>
+      <a name="incoming" val="4"/>
+    </comp>
+    <comp lib="1" loc="(260,130)" name="XOR Gate">
+      <a name="facing" val="south"/>
+      <a name="size" val="30"/>
+      <a name="inputs" val="2"/>
+    </comp>
+    <comp lib="0" loc="(90,90)" name="Pin">
+      <a name="width" val="4"/>
+      <a name="tristate" val="false"/>
+      <a name="label" val="B"/>
+    </comp>
+    <comp loc="(460,370)" name="SC">
+      <a name="label" val="SC3"/>
+    </comp>
+    <comp lib="1" loc="(180,130)" name="XOR Gate">
+      <a name="facing" val="south"/>
+      <a name="size" val="30"/>
+      <a name="inputs" val="2"/>
+    </comp>
+    <comp lib="0" loc="(90,200)" name="Pin">
+      <a name="width" val="4"/>
+      <a name="tristate" val="false"/>
+      <a name="label" val="A"/>
+    </comp>
+    <comp loc="(380,320)" name="SC">
+      <a name="label" val="SC2"/>
+    </comp>
+    <comp lib="0" loc="(510,490)" name="Splitter">
+      <a name="facing" val="west"/>
+      <a name="fanout" val="4"/>
+      <a name="incoming" val="4"/>
+      <a name="appear" val="right"/>
     </comp>
   </circuit>
 </project>
